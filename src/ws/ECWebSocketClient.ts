@@ -1,21 +1,22 @@
-import {BehaviorSubject} from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 enum WSReadyState {
-  CONNECTING, OPEN, CLOSING, CLOSED
+  CONNECTING,
+  OPEN,
+  CLOSING,
+  CLOSED,
 }
 
 enum MessageType {
-  POSITION_CHANGE = 1
+  POSITION_CHANGE = 1,
 }
 
 export class ECWebSocketClient {
-
   private ws!: WebSocket;
   private started = false;
   private connected = false;
   public message: BehaviorSubject<any>;
   public retryMS = 3000;
-
 
   constructor() {
     this.message = new BehaviorSubject({});
@@ -32,7 +33,6 @@ export class ECWebSocketClient {
       this.ws.onerror = () => {};
     }
   }
-
 
   onOpen(event: Event): void {
     console.log('Opened WebSocket');
@@ -66,6 +66,4 @@ export class ECWebSocketClient {
   get isConnected() {
     return this.connected;
   }
-
-
 }

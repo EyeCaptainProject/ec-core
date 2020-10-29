@@ -1,10 +1,8 @@
-import {ECCoreConfig} from '../config/ECCoreConfig';
+import { ECCoreConfig } from '../config/ECCoreConfig';
 import tinycolor from 'tinycolor2';
 
 export class ECColors {
-
   private static ecCoreConfig = ECCoreConfig.getInstance();
-
 
   static get INFO() {
     return this.buildColorType('info');
@@ -31,12 +29,9 @@ export class ECColors {
     if (this.ecCoreConfig.gradients.use) {
       const darkerColor = tinycolor(colorString);
       darkerColor.darken(this.ecCoreConfig.gradients.darken);
-      return `radial-gradient(circle at top left, ${ color.toRgbString()}, ${ darkerColor.toRgbString() })`;
+      return `radial-gradient(circle at top left, ${color.toRgbString()}, ${darkerColor.toRgbString()})`;
     } else {
       return color.toRgbString();
     }
   }
-
-
-
 }

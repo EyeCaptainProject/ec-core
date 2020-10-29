@@ -1,20 +1,18 @@
-import {Position} from '../types/Position';
-import { Rect2D } from "../types/Rect2D";
+import { Position } from '../types/Position';
+import { Rect2D } from '../types/Rect2D';
 
 export class DistanceCalculations {
-
-
   static RectSize(rect: Rect2D) {
     return {
       w: rect.x2 - rect.x1,
-      h: rect.y2 - rect.y1
+      h: rect.y2 - rect.y1,
     };
   }
 
   static RectCenter(rect: Rect2D) {
     return {
       x: (rect.x1 + rect.x2) / 2,
-      y: (rect.y1 + rect.y2) / 2
+      y: (rect.y1 + rect.y2) / 2,
     };
   }
 
@@ -29,17 +27,16 @@ export class DistanceCalculations {
       x1: rect.x1 * scalar,
       y1: rect.y1 * scalar,
       x2: rect.x2 / scalar,
-      y2: rect.y2 / scalar
+      y2: rect.y2 / scalar,
     };
   }
 
-  static ShrinkRect2DBy(rect: Rect2D, amountX: number, amountY: number, ) {
+  static ShrinkRect2DBy(rect: Rect2D, amountX: number, amountY: number) {
     return this._EnlargeRect2DBy(rect, amountX, amountY, -1);
   }
 
-  static EnlargeRect2DBy(rect: Rect2D, amountX: number, amountY: number, ) {
+  static EnlargeRect2DBy(rect: Rect2D, amountX: number, amountY: number) {
     return this._EnlargeRect2DBy(rect, amountX, amountY, 1);
-
   }
 
   private static _EnlargeRect2DBy(rect: Rect2D, amountX: number, amountY: number, dir: number) {
@@ -47,18 +44,16 @@ export class DistanceCalculations {
       x1: rect.x1 - amountX * dir,
       y1: rect.y1 - amountY * dir,
       x2: rect.x2 + amountX * dir,
-      y2: rect.y2 + amountY * dir
+      y2: rect.y2 + amountY * dir,
     };
   }
-
-
 
   static DomRectToRect2D(domRect: DOMRect) {
     return {
       x1: domRect.left,
       y1: domRect.top,
       x2: domRect.right,
-      y2: domRect.bottom
+      y2: domRect.bottom,
     };
   }
 
@@ -67,14 +62,13 @@ export class DistanceCalculations {
   }
 
   static DistCircleToSquare(position: Position, diameter: number, rect: Rect2D) {
-
     let distance = -1;
 
     const scaledRect = {
       x1: rect.x1 - diameter / 2,
       y1: rect.y1 - diameter / 2,
       x2: rect.x2 + diameter / 2,
-      y2: rect.y2 + diameter / 2
+      y2: rect.y2 + diameter / 2,
     };
 
     // Is Below
@@ -108,10 +102,9 @@ export class DistanceCalculations {
       distance = scaledRect.x1 - position.x;
       // Is just to right
     } else if (position.x >= scaledRect.x2) {
-      distance =  position.x - scaledRect.x2;
+      distance = position.x - scaledRect.x2;
     }
 
     return distance;
   }
-
 }

@@ -1,10 +1,8 @@
 // TODO: MOVE to file
 
-
-export interface ColorDefinition{
-  [key: string]: string
+export interface ColorDefinition {
+  [key: string]: string;
 }
-
 
 const defaultConfig = {
   gazeThreshold: 100,
@@ -12,7 +10,7 @@ const defaultConfig = {
   recentAppsSidebar: {
     padding: 20,
     backgroundColor: 'rgb(25,31,38)',
-    textColor: 'white'
+    textColor: 'white',
   },
   colors: {
     info: '#17cfd3',
@@ -20,17 +18,12 @@ const defaultConfig = {
     notify: '#1558cb',
     warn: '#FF7600',
     warnDark: '#FF7600',
-    error: '#e0251a'
-  }
-
+    error: '#e0251a',
+  },
 };
 
 export class ECCoreConfig {
-
-  constructor() {
-
-  }
-
+  constructor() {}
 
   /**
    * Singleton pattern
@@ -39,16 +32,16 @@ export class ECCoreConfig {
 
   public gazeThreshold!: number;
   public appIconSize!: number;
-  public recentAppsSidebar!:{
-    padding: number,
-    backgroundColor: string,
-    textColor: string
+  public recentAppsSidebar!: {
+    padding: number;
+    backgroundColor: string;
+    textColor: string;
   };
 
   public colors!: ColorDefinition;
   public gradients!: {
-    use: boolean,
-    darken: number
+    use: boolean;
+    darken: number;
   };
 
   configuration: any; // TODO: Set to config interface
@@ -63,5 +56,4 @@ export class ECCoreConfig {
   private loadConfig() {
     Object.assign(this, defaultConfig);
   }
-
 }

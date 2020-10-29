@@ -1,7 +1,6 @@
-import {ECColors} from './ECColors';
+import { ECColors } from './ECColors';
 
 export class ECActions {
-
   static CLOSE = {
     icon: 'close',
     color: ECColors.ERROR,
@@ -9,12 +8,11 @@ export class ECActions {
 
   static OK = {
     icon: 'check',
-    color: ECColors.SUCCESS
+    color: ECColors.SUCCESS,
   };
 
   static BACK = {
     icon: 'arrow-left',
-    color: ECColors.WARN
+    color: ECColors.WARN,
   };
-
 }
