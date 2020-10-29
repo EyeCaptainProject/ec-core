@@ -1,7 +1,6 @@
 import { ECCoreConfig } from '../config/ECCoreConfig';
 import { TinyColor } from '@ctrl/tinycolor';
 
-
 export class ECColors {
   private static ecCoreConfig = ECCoreConfig.getInstance();
 
