@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EyeCaptainProject/ec-app-engine.git"
+    "url": "git+https://github.com/EyeCaptainProject/ec-core.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
