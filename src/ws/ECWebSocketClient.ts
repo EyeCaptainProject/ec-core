@@ -10,10 +10,10 @@ enum MessageType {
 
 export class ECWebSocketClient {
 
-  ws: WebSocket;
+  private ws!: WebSocket;
   private started = false;
   private connected = false;
-  public message;
+  public message: BehaviorSubject<any>;
   public retryMS = 3000;
 
 
