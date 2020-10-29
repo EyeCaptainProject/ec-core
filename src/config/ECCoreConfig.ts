@@ -21,9 +21,9 @@ const defaultConfig = {
     error: '#e0251a',
   },
   gradients: {
-  use: true,
-  darken: 20
-  }
+    use: true,
+    darken: 20,
+  },
 };
 
 export class ECCoreConfig {
