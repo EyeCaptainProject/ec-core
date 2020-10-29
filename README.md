@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ec-app-engine
 The ``ec-app-engine`` is the abstraction layer for the **EyeCaptain-Application**.
 
@@ -11,3 +12,6 @@ The ``ec-app-engine`` is the abstraction layer for the **EyeCaptain-Application*
 
 > *You can get an access token in your profile: https://github.com/settings/tokens   
 > For more information about the registry go to [this page](https://docs.github.com/en/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages)
+=======
+# ec-core
+>>>>>>> fb598ed5816e0a2cb6eac8afa09302587aa24742
