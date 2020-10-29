@@ -1,0 +1,67 @@
+// TODO: MOVE to file
+
+
+export interface ColorDefinition{
+  [key: string]: string
+}
+
+
+const defaultConfig = {
+  gazeThreshold: 100,
+  appIconSize: 150,
+  recentAppsSidebar: {
+    padding: 20,
+    backgroundColor: 'rgb(25,31,38)',
+    textColor: 'white'
+  },
+  colors: {
+    info: '#17cfd3',
+    success: '#3db322',
+    notify: '#1558cb',
+    warn: '#FF7600',
+    warnDark: '#FF7600',
+    error: '#e0251a'
+  }
+
+};
+
+export class ECCoreConfig {
+
+  constructor() {
+
+  }
+
+
+  /**
+   * Singleton pattern
+   */
+  private static instance: ECCoreConfig;
+
+  public gazeThreshold!: number;
+  public appIconSize!: number;
+  public recentAppsSidebar!:{
+    padding: number,
+    backgroundColor: string,
+    textColor: string
+  };
+
+  public colors!: ColorDefinition;
+  public gradients!: {
+    use: boolean,
+    darken: number
+  };
+
+  configuration: any; // TODO: Set to config interface
+  public static getInstance(): ECCoreConfig {
+    if (!ECCoreConfig.instance) {
+      ECCoreConfig.instance = new ECCoreConfig();
+      ECCoreConfig.instance.loadConfig();
+    }
+    return ECCoreConfig.instance;
+  }
+
+  private loadConfig() {
+    Object.assign(this, defaultConfig);
+  }
+
+}
