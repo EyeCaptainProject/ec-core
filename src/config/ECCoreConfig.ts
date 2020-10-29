@@ -20,6 +20,10 @@ const defaultConfig = {
     warnDark: '#FF7600',
     error: '#e0251a',
   },
+  gradients: {
+  use: true,
+  darken: 20
+  }
 };
 
 export class ECCoreConfig {
