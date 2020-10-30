@@ -1,4 +1,4 @@
-> In order to pull/push this package follow the guide at: [Use npm with the GitGub Registry](https://github.com/EyeCaptainProject/eyecaptain-project-nocode/blob/master/npm%20with%20GitHub%20registry.md)  
+> In order to pull/push this package follow the guide at: [Use npm with the GitHub registry](https://github.com/EyeCaptainProject/eyecaptain-project-nocode/blob/master/npm%20with%20GitHub%20registry.md)  
 # ec-core
 The `ec-core` includes the core tools for the **EyeCaptain-Application**.
 
