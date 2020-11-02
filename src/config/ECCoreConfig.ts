@@ -57,7 +57,7 @@ export class ECCoreConfig {
     return ECCoreConfig.instance;
   }
 
-  private loadConfig() {
+  private loadConfig(): void {
     Object.assign(this, defaultConfig);
   }
 }
