@@ -1,10 +1,9 @@
 import { ECColors } from './ECColors';
 
 export class ECAction {
-
   icon: string;
   color: string;
-  callback!: Function | undefined ;
+  callback!: Function | undefined;
 
   constructor(icon: string, color: string, callback?: Function) {
     this.icon = icon;
@@ -17,19 +16,18 @@ export class ECAction {
       this.callback(data);
     }
   }
-
 }
 
 export class ECActions {
   public static Close(callback?: Function): ECAction {
-    return new  ECAction('close', ECColors.ERROR, callback);
+    return new ECAction('close', ECColors.ERROR, callback);
   }
 
   public static Ok(callback?: Function): ECAction {
-    return new  ECAction('check', ECColors.SUCCESS, callback);
+    return new ECAction('check', ECColors.SUCCESS, callback);
   }
 
   public static Back(callback?: Function): ECAction {
-    return new  ECAction('arrow-left', ECColors.WARN, callback);
+    return new ECAction('arrow-left', ECColors.WARN, callback);
   }
 }
