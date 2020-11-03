@@ -3,7 +3,7 @@ import { ECColors } from './ECColors';
 export class ECAction {
   icon: string;
   color: string;
-  callback!: Function | undefined;
+  private readonly callback!: Function | undefined;
 
   constructor(icon: string, color: string, callback?: Function) {
     this.icon = icon;
