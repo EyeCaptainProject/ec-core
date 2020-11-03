@@ -9,7 +9,7 @@ const defaultConfig = {
   gazeThreshold: 100,
   appIconSize: 150,
   buttonSize: 100,
-  buttonSpacing: 100,
+  buttonSpacing: 10,
   recentAppsSidebar: {
     padding: 20,
     backgroundColor: 'rgb(25,31,38)',
