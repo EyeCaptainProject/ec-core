@@ -1,18 +1,35 @@
 import { ECColors } from './ECColors';
 
+export class ECAction {
+
+  icon: string;
+  color: string;
+  callback!: Function | undefined ;
+
+  constructor(icon: string, color: string, callback?: Function) {
+    this.icon = icon;
+    this.color = color;
+    this.callback = callback;
+  }
+
+  submit(data?: any): void {
+    if (this.callback) {
+      this.callback(data);
+    }
+  }
+
+}
+
 export class ECActions {
-  static CLOSE = {
-    icon: 'close',
-    color: ECColors.ERROR,
-  };
+  public static Close(callback?: Function): ECAction {
+    return new  ECAction('close', ECColors.ERROR, callback);
+  }
 
-  static OK = {
-    icon: 'check',
-    color: ECColors.SUCCESS,
-  };
+  public static Ok(callback?: Function): ECAction {
+    return new  ECAction('check', ECColors.SUCCESS, callback);
+  }
 
-  static BACK = {
-    icon: 'arrow-left',
-    color: ECColors.WARN,
-  };
+  public static Back(callback?: Function): ECAction {
+    return new  ECAction('arrow-left', ECColors.WARN, callback);
+  }
 }

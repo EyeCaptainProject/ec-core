@@ -10,6 +10,7 @@ const defaultConfig = {
   appIconSize: 150,
   buttonSize: 100,
   buttonSpacing: 10,
+  actionsBeforeSubmit: false,
   recentAppsSidebar: {
     padding: 20,
     backgroundColor: 'rgb(25,31,38)',
