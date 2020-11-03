@@ -5,8 +5,11 @@ export interface ColorDefinition {
 }
 
 const defaultConfig = {
+  gazeTime: 1500,
   gazeThreshold: 100,
   appIconSize: 150,
+  buttonSize: 100,
+  buttonSpacing: 100,
   recentAppsSidebar: {
     padding: 20,
     backgroundColor: 'rgb(25,31,38)',
@@ -35,6 +38,9 @@ export class ECCoreConfig {
   private static instance: ECCoreConfig;
 
   public gazeThreshold!: number;
+  public gazeTime!: number;
+  public buttonSize!: number;
+  public buttonSpacing!: number;
   public appIconSize!: number;
   public recentAppsSidebar!: {
     padding: number;
